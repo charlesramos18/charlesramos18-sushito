@@ -229,14 +229,14 @@ article{
   
     
 }
-@media screen and (max-width: 250px){
+@media screen and (max-width:400px ){
     
     .contacto {
         position:absolute;
         right: 0;
-       bottom: 110px;
-      
+        bottom: 50px;
         color:   #77491f ;   
+       
     }
       }
 
