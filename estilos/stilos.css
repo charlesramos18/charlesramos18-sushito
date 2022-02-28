@@ -1,0 +1,389 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap');
+*{
+    
+    font-family: 'Playfair Display', serif;
+    margin: 0;
+    
+  
+}
+
+header{
+    
+    position: relative;
+    height:220px;
+    width: 100vw;
+
+   
+    
+  
+  
+}
+
+
+
+
+
+.saliente{
+
+    position:fixed;
+    top: 25px;
+    right:0;
+    height: 50px;
+    width: 15px;
+    background: linear-gradient(to bottom , #ff7d04 ,rgba(255, 129, 25, 0.952), #fcf7ba 50%,rgba(255, 129, 25, 0.952), #ff7d04  );   
+    border-radius: 40% 0% 0% 50%;
+    box-shadow: -2px 0px 2px 0px  rgba(0,0,0,0.25);
+    z-index: 40;
+  
+  
+    
+}
+.saliente:hover{
+    padding-left: 5px;
+    transform-origin: right  0%;
+    transition: 0.2s;
+    opacity: 0.5;
+ 
+}
+.saliente:hover .tooltip {
+    visibility: visible;
+    transition-duration: 1s;
+    
+}
+
+
+
+.tooltip{
+    position: absolute;
+    background-color: #000;
+    padding: 10px  15px;
+    border-radius: 7px;
+    color: #fff;
+    opacity: 1;
+    visibility: hidden;
+    transition:  1s ease;
+     right: 35px;
+    top: 33px;
+    z-index: 0;
+    transform: translateY(-30px);
+    width: 50px;
+    font-size: 10px
+
+}
+
+.tooltip::before{
+    content: "";
+    position: absolute;
+    top: 27%;
+    left: 99%;
+    border: 9px solid;
+    border-color: #000 #0000 #0000 #0000;
+    transform: rotate(-90deg) ;
+ 
+}
+
+
+
+.logoSushiito{
+    height: 120px;
+    position: absolute;
+    margin: 0;
+    top:40%;
+    left: 50%;
+    transition: transform;
+    transform: translate(-50%,-50%);
+}
+
+.logoSushiito:hover{
+   
+    opacity: 0.5;
+    transform:  rotate(-10deg)  scale(1.2) translate(-50%,-50%) ;
+    transition-duration: 1s ;
+    transform-origin:top left ;
+   
+   
+}
+
+.michelin img{
+    position: absolute;
+    height: 110px;
+    transform: translateY(-90px);
+    left: 0%;
+    z-index: 30;
+ 
+}
+.sello img{
+    position: absolute;
+    height: 60px;
+    transform: translateY(-70px);
+    right:10px;
+    z-index: 10;
+   
+
+  
+   
+}
+
+   
+
+    #cupondescuento{
+    position: relative;
+     border-radius: 10% 0% 0% 20%;
+     box-shadow: -4px 0px 2px 0px  rgba(0,0,0,0.25);
+     height: 80px;
+     width: 130px;
+     z-index: 40;
+     display: none;
+     transform: translate(-83%);
+     top: -15px;
+
+   
+
+ } 
+
+
+
+#cupondescuento:target {
+   opacity:1;
+   display: block;
+   
+    
+  }
+
+/* nav */
+
+nav{
+    
+    background: linear-gradient(to right, #77491f , ivory ,#77491f  );   
+    box-shadow: 0px 0px 6px 0px  #77491f ;
+    width: 100vw;
+
+    
+   
+}
+@media screen and (max-width: 800px){
+    
+    nav ul {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        align-content: center;
+      
+      }
+  
+    
+  
+}
+nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    list-style: none;
+    align-items: center;
+    padding: 0;
+}
+
+nav li a {
+    color:black;
+    display: block;
+    text-decoration: none;
+    padding: 20px 40px;
+ 
+}
+
+hr {
+    border-top: 4px solid red;
+    width: 500px;
+    position: absolute;
+    bottom:-40px;
+    left: 20px;
+}
+
+  main{
+ 
+    position: relative;
+    width: 100vw;
+    margin-top: 100px;
+    height: 700px;
+   
+   
+
+    
+    
+}
+article{
+    position: relative;
+    top: 130px;
+    height: 200px;
+    margin-top: 0px;
+  
+}
+
+
+
+
+.redes{
+
+  position: absolute;
+  
+  
+    
+}
+@media screen and (max-width: 209px){
+    
+    .contacto {
+        position: absolute;
+        right: 0;
+        bottom:  50px;
+      
+        color:   #77491f ;   
+    }
+      }
+
+.contacto {
+    position: absolute;
+    right: 0;
+    margin: 9px;
+    color:   #77491f ;   
+}
+
+
+.twitter {
+    position: absolute;
+    color: rgb(17, 128, 202);
+    left: 10px;
+    margin: 10px;
+    
+}
+.facebook {
+    position: absolute;
+    color: blue;
+    left: 40px;
+    margin: 10px;
+    
+}
+.pinterest{
+    position: absolute;
+    color: red;
+    left: 65px;
+    margin: 10px;
+}
+.instagram{
+    position: absolute;
+    color: rgb(190, 107, 184);
+    left: 95px;
+    margin: 10px;
+}
+.google{
+    position: absolute;
+    color: rgb(240, 94, 94);
+    left: 125px;
+    margin: 10px;
+  
+}
+
+h1{
+ position: absolute;    
+ color: rgb(25, 144, 180);
+ margin: 0px;
+ left: 50%;
+ transform: translate(-50%,0px);
+ text-align: center;
+ 
+
+}
+.bannerfixed {
+
+    background-image: url("../imagenes_evaluable2/fr1_nigirisushi.jpg");
+    min-height: 200px;
+    width: 100vw;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    box-shadow: 0px 0px 10px 1px inset #000 ;
+  }
+
+.fotosfuera{
+    position:relative;
+    padding: 15px;
+    padding-bottom: 40px;
+    box-shadow:  0px 0px 5px -1px  gray ;
+    border-radius: 10px;
+    height: 210px;
+    width: 130px;
+    text-align: center;
+    font-size: 12px;
+    margin: 20px;
+  
+}
+.fotosPlatos{
+    margin-bottom:5px;
+    height: 200px;
+    width: 130px;
+    background-image:url("../imagenes_evaluable2/superBento.jpg") ;
+    background-size: 280px ;
+    background-position: center;
+    background-clip:content-box;
+    background-color: black;
+    box-shadow:  0px 0px 5px -1px  gray ;
+    border-radius: 10px;
+    background-repeat: no-repeat;
+  
+
+}
+
+
+ footer{
+   
+    background-color: rgb(0, 0, 0);
+    white-space: nowrap;
+    max-width: 100vw;
+    position:relative;
+    bottom: 0px;
+    height: 200px;
+    overflow: scroll;
+     margin-left: 0;
+   
+   
+
+
+ }
+ .footer1{
+
+    
+    display: inline-block;
+    height: 150px;
+    width: 477px;
+    padding: 0;
+    margin: 0;
+   
+ }
+ .footer2{
+   
+
+    display: inline-block;
+    height: 150px;
+    width: 477px;
+    padding: 0;
+ }
+ .footer3{
+     
+
+     display: inline-block;
+    height: 150px;
+     width: 478px;
+     padding: 0;
+ }
+ .footer4{
+    
+     height: 50px;
+
+     width: 1440px;
+    
+ }
+
+
+
+
+ 
