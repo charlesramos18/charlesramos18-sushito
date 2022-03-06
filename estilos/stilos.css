@@ -106,7 +106,7 @@ header{
 }
 .sello img{
     position: absolute;
-    height: 9%;
+    height: 75px;
     transform: translateY(-80px);
     right:10px;
     z-index: 10; 
@@ -124,8 +124,6 @@ header{
      transform: translate(-83%);
      top: -15px;
 
-   
-
  } 
 
 
@@ -133,8 +131,7 @@ header{
 #cupondescuento:target {
    opacity:1;
    display: block;
-   
-    
+     
   }
 
 /* nav */
@@ -143,9 +140,7 @@ nav{
     
     background: linear-gradient(to right, #77491f , ivory ,#77491f  );   
     box-shadow: 0px 0px 6px 0px  #77491f ;
-    width: 100%;
-
-    
+    width: 100%;  
    
 }
 
@@ -199,7 +194,7 @@ nav li a {
     margin-top: 13px;
     color:#ff8b1e;  
     font-size: small; 
-    margin-right: 1%;
+    margin-right: 10px;
 }
 
 @media screen and (max-width:800px ){
@@ -306,7 +301,7 @@ article {
   content: "Hichito Nishimura: Gerente de Sushitto";
   opacity: 0.5;
  position: absolute;
-  bottom: -40px;
+  bottom: -70px;
   right: 0px;
   justify-content:center;
 }
@@ -324,7 +319,6 @@ hr {
 }
 .medioindex{
 
-outline: #000 2px solid;
 display: flex;
 flex-wrap: wrap;
 height:20%;
@@ -361,7 +355,6 @@ transform: translateX(25%);
 .fotos{
    display: flex;
     flex-wrap: wrap;
-    outline: #000 2px solid;
     justify-content:space-around ;
     width: 90%;
     margin: auto;
