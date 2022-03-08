@@ -3,11 +3,14 @@
     
     font-family:'Playfair Display SC', serif;
     margin: 0;
+  
+   
    
   
     
 }
 
+/*encabezado*/
 header{
     
     position: relative;
@@ -126,13 +129,13 @@ header{
 
  } 
 
-
-
 #cupondescuento:target {
    opacity:1;
    display: block;
      
   }
+
+/*encabezado*/
 
 /* nav */
 
@@ -140,7 +143,8 @@ nav{
     
     background: linear-gradient(to right, #77491f , ivory ,#77491f  );   
     box-shadow: 0px 0px 6px 0px  #77491f ;
-    width: 100%;  
+    width: 100%; 
+  
    
 }
 
@@ -173,14 +177,17 @@ nav li a {
     color:black;
     display: block;
     text-decoration: none;
-    padding: 20px 40px;
- 
+    padding: 15px 40px;
+  transform: translateY(6px);
+    
 }
 
 .redes{
 
-  position: absolute;
+
   transition: 2s ease-in;
+ 
+
 }
 
 .redes a:hover{
@@ -189,76 +196,95 @@ nav li a {
 }
 
 .contacto {
-    position: absolute;
-    right: 0;
-    margin-top: 13px;
+    position:relative;
+    justify-content: space-between;
     color:#ff8b1e;  
     font-size: small; 
-    margin-right: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    margin-right: 5px;
+    margin-bottom: 50px;
+    top: 30px;
+    
+  
+ 
+
 }
 
-@media screen and (max-width:800px ){
-    
-    .contacto {
-        position:absolute;
-        right: 0;
-        color:#ff8b1e;   
-       
-    }
-      }
+p.contacto{
+    width: 300px;
+    padding-left: 0px;
+
+}
+
 
 
 .twitter {
-    position: absolute;
+    
     color: rgb(17, 128, 202);
-    left: 10px;
     margin: 10px;
     
 }
 
 
 .facebook {
-    position: absolute;
     color: blue;
-    left: 40px;
     margin: 10px;
+
     
 }
 .pinterest{
-    position: absolute;
+   
     color: red;
-    left: 65px;
     margin: 10px;
+   
 }
 .instagram{
-    position: absolute;
+
     color: rgb(190, 107, 184);
-    left: 95px;
     margin: 10px;
+   
+   
 }
 .google{
-    position: absolute;
+   
     color: rgb(240, 94, 94);
-    left: 125px;
     margin: 10px;
+ 
   
 }
 
+/*principal*/
 
 main{
     
     position: relative;
-    width: 100vw;
     margin-top: 10%;
     height: auto;
+    width: 100%;
+    overflow: hidden;
+  
 
 }
-article{
+@media screen and (max-width: 800px){
+    main{
+        margin-top: 20%;
+    }
 
+    }
+
+article{
 
 margin-bottom: 40px;
 height: auto;
+width: 100%;
 
+
+}
+
+h6{
+    display: none;
 }
    
 
@@ -268,6 +294,9 @@ h1 , h2{
 
 
 }
+
+
+
 
 .bannerfixed {
 
@@ -462,24 +491,10 @@ transform: translateX(25%);
   
 }
 
-.fotosPlatos1:hover{
+.fotosPlatos1:hover , .fotosPlatos2:hover,.fotosPlatos3:hover, .fotosPlatos4:hover ,.fotosPlatos5:hover, .fotosPlatos6:hover  {
     opacity: 0.5;
 }
-.fotosPlatos2:hover{
-    opacity: 0.5;
-}
-.fotosPlatos3:hover{
-    opacity: 0.5;
-}
-.fotosPlatos4:hover{
-    opacity: 0.5;
-}
-.fotosPlatos5:hover{
-    opacity: 0.5;
-}
-.fotosPlatos6:hover{
-    opacity: 0.5;
-}
+
 @media screen and (max-width: 800px){ /*  tarjetas*/
     
     .fotosfuera{
@@ -494,7 +509,464 @@ transform: translateX(25%);
 }
 /*  tarjetas*/
 
+/* colage */
 
+
+.colagefotos{
+    display: grid;
+    grid-template-columns: 40% 40% 20%;
+    grid-template-rows: 50% 50%;
+    grid-gap: 2px;
+    width:80%;
+    margin: auto;
+    height: 500px;
+ 
+}
+
+.hijo1{
+   
+  
+   grid-column:1/2 ;
+   grid-row: 1/2;
+   background-image: url("../imagenes_evaluable2/andrewNishimura.jpg");
+   background-size: cover;
+   background-repeat: no-repeat;
+   background-position: 60%;
+   background-attachment:local;
+   border-radius: 5px;
+   box-shadow:  0px 0px 3px 1px  gray ;
+   filter: sepia(100%);
+  
+
+}
+
+
+.hijo1:hover{
+transform: rotate(360deg);
+transition: 0.5s;
+
+}
+
+.hijo2{
+
+    grid-column: 2/3;
+    grid-row: 1/3;
+    background-image: url("../imagenes_evaluable2/nakaneNishimura.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 55%;
+    border-radius: 5px;
+    box-shadow:  0px 0px 3px 1px  gray ;
+    filter: blur(2px);
+ 
+ }
+
+ .hijo2:hover{
+   filter: blur(0);
+   transform: scale(.6) rotate(20deg);
+   transition: 0.5s;
+   
+    }
+ .hijo3{
+   
+    
+    grid-column: 3/4;
+    grid-row: 1/2;
+    background-image: url("../imagenes_evaluable2/hichitoNishimura.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 80%;
+    border-radius: 5px;
+    box-shadow:  0px 0px 3px 1px  gray ;
+    filter: grayscale(100%);
+   
+
+ }
+
+ .hijo3:hover{
+
+    transform: rotateY(180deg);
+    transition: 0.5s;
+ }
+
+ .hijo4{
+    grid-column:1/2 ;
+    grid-row: 2/3;
+    background-image: url("../imagenes_evaluable2/joeNishimura.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top;
+    border-radius: 5px;
+    box-shadow:  0px 0px 3px 1px  gray ;
+ }
+
+ .hijo4:hover{
+
+    transform: rotateX(180deg);
+    transition: 0.5s;
+ }
+
+ .hijo5{
+    grid-column:3/4 ;
+    grid-row: 2/3;
+    background-image: url("../imagenes_evaluable2/fredNishimura.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 80%;
+    border-radius: 5px;
+    box-shadow:  0px 0px 3px 1px  gray ;
+    filter: sepia(100%);
+ }
+ .hijo5:hover{
+
+    transform: skew(20deg);
+    transition: 0.5s;
+ }
+ 
+/* colage */
+
+
+section.citas{
+    width: 70%;
+    margin: auto;
+    display: flex;
+    justify-content: space-around;
+    align-content: space-between;
+   
+}
+
+
+
+
+.citaandrew{
+    background-image: url("../imagenes_evaluable2/andrewNishimura.jpg");
+    background-size: 330px;
+    background-repeat: no-repeat;
+    background-position: 67% 17%;
+    border-radius: 5px;
+    box-shadow:  3px 1px 5px 1px  rgb(51, 49, 49) inset  ;
+    width: 90px;
+    height: 90px;
+    border-radius: 50% ;
+    animation-duration: 2s;
+    animation-iteration-count: 3.5;
+    transform-origin: bottom;
+    margin-right: 20px;
+
+}
+.citaHichito{
+    background-image: url("../imagenes_evaluable2/hichitoNishimura.jpg");
+    background-size: 350px;
+    background-repeat: no-repeat;
+    background-position: 76% 12%;
+    border-radius: 5px;
+    box-shadow:   3px 1px 5px 1px   rgb(51, 49, 49) inset  ;
+    width: 90px;
+    height: 90px;
+    border-radius: 50% ;
+    animation-duration: 2s;
+    animation-iteration-count: 3.5;
+    transform-origin: bottom;
+    margin-left: 20px;
+     
+}
+.citafred{
+    background-image: url("../imagenes_evaluable2/fredNishimura.jpg");
+    background-size: 310px;
+    background-repeat: no-repeat;
+    background-position: 82% 9%;
+    border-radius: 5px;
+    box-shadow:  3px 1px 5px 1px  rgb(51, 49, 49) inset  ;
+    width: 90px;
+    height: 90px;
+    border-radius: 50% ;
+    animation-duration: 2s;
+    animation-iteration-count: 3.5;
+    transform-origin: bottom;
+    margin-right: 20px;
+
+}
+
+.citanakane{
+    background-image: url("../imagenes_evaluable2/nakaneNishimura.jpg");
+    background-size: 190px;
+    background-repeat: no-repeat;
+    background-position: 55% 0%;
+    border-radius: 5px;
+    box-shadow:   3px 1px 5px 1px   rgb(51, 49, 49) inset  ;
+    width: 90px;
+    height: 90px;
+    border-radius: 50% ;
+    animation-duration: 2s;
+    animation-iteration-count: 3.5;
+    transform-origin: bottom;
+    margin-left: 20px;
+     
+}
+
+.citajoe{
+    background-image: url("../imagenes_evaluable2/joeNishimura.jpg");
+    background-size: 170px;
+    background-repeat: no-repeat;
+    background-position: 50% 9%;
+    border-radius: 5px;
+    box-shadow:  3px 1px 5px 1px  rgb(51, 49, 49) inset  ;
+    width: 90px;
+    height: 90px;
+    border-radius: 50% ;
+    animation-duration: 2s;
+    animation-iteration-count: 3.5;
+    transform-origin: bottom;
+    margin-right: 20px;
+
+}
+
+
+.citaHichito:hover, .citaandrew:hover,.citafred:hover, .citanakane:hover, .citajoe:hover {
+    animation-name: bounce ;
+    animation-duration: .2s;
+}
+@keyframes bounce {
+  0%   { transform: translateY(0); }
+  50%  { transform: translateY(-8px); }
+  100% { transform: translateY(0); }
+}
+
+section q {
+   width: 79%;
+   height: 20%;
+   align-self: center;
+   font-size: 17px;
+   margin-bottom: 40px;
+   margin-top: 20px;
+   
+}
+
+
+.cita1texto, .cita3texto, .cita5texto{
+    border-left: #2590ad 4px solid;
+    padding-left:20px;
+    text-align: left;
+
+   
+}
+
+.cita2texto, .cita4texto{
+    border-right: #2590ad 4px solid;
+    padding-right:20px;
+    text-align: right;
+}
+
+
+
+
+
+.autor1,.autor3, .autor5{
+    opacity: 0.5;
+    right: 30%;
+    font-size: 15px;
+    transform: translate(50%);
+    margin-bottom: 30px;
+  
+    
+
+}
+
+.autor2, .autor4{
+    opacity: 0.5;
+    right: 35%;
+    font-size: 15px; 
+    transform: translate(40%);
+    margin-bottom: 30px;
+   
+  
+ 
+}
+
+@media screen and (max-width: 800px){
+
+  section  q{
+      
+        font-size: 9px;
+        margin: 9px;
+    
+    }
+    .autor1, .autor2, .autor3, .autor4, .autor5{
+        font-size: 8px;
+        transform: translate(150px);
+        
+    }
+}
+
+/*carta*/
+
+h3{
+    color: rgb(37, 144, 173);
+
+
+
+}
+
+.cartapadre{
+      width: 100%;
+      height: 100%;
+      display: flex;
+      justify-content: space-around;
+      position: relative;
+      font-weight: bolder;
+      outline: #000 1px inset;
+      z-index: 0;
+     
+  
+
+  
+}
+.cartapadre ::after{
+       content: "";
+        width: 100%;
+        height: 100%;
+        background-image: url("../imagenes_evaluable2/sushitoRestaurant.jpg");
+        background-size: cover;
+        background-position: center;
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        opacity: 0.9%;
+        display: block;
+        z-index: 10;
+
+  }
+ 
+
+
+
+ 
+.carta{
+    width:auto;
+    font-size:10px;
+    text-align: center; 
+    margin: 4%;
+    line-height: 8em;
+}
+   
+@media screen and (max-width: 800px){
+    .cartapadre{
+     flex-direction: column;
+    }
+    .carta{
+    font-size:15px;
+    line-height: 9em;
+    }
+}
+.carta ul{
+
+   
+    list-style: none;
+    padding: 1em;
+    line-height:5em;
+
+}
+ .menudiario::first-line {
+   
+    font-size: larger;
+    color: #db0707;
+    line-height: 1em;
+}
+iframe{
+    border-radius: 5% 50%;
+    width: 400px;
+    height: 400px;
+    box-shadow: 0px  1px 7px 1px black;
+  
+}
+h3{
+    text-align: center;
+  
+    padding: 25px;
+}
+
+.info ul{
+line-height: 2em;
+list-style: none;
+
+}
+
+.bannerfixeddos{
+    background-image: url("../imagenes_evaluable2/fr2_sushitable.jpg");
+    min-height: 200px;
+    width: 100%;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    box-shadow: 0px 0px 10px 1px inset #000 ;
+
+}
+
+.horario li:nth-child(1) {
+   
+   font-size: large;
+    list-style:disc;
+    font-weight: bolder;
+}
+
+.horario li:nth-child(4) {
+   
+    font-weight: bolder;
+    list-style:disc;
+    font-size: large;
+   
+}
+
+.dos{
+ width: 450px;
+ margin-top: 30px;
+ margin-bottom: 0px;
+ border: 1px solid;
+}
+
+.info p{
+    font-style: italic;
+     color: grey;
+     opacity: .6;
+  
+} 
+
+
+    
+.info span{
+    font-weight:bolder;
+    color: #000;
+    font-size: medium;
+    opacity: 1;
+    
+    
+}
+
+
+.mapa{
+
+    width: 1000px;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    margin: auto;
+    padding: 10%;
+
+}
+
+.info{
+     outline: 1px solid #000;
+     width: 500px;
+     height:400px ;
+     padding: 20px;
+     border-radius: 5%;
+
+}
+
+/*pie */
  footer{
    
     background-color: rgb(0, 0, 0);
@@ -503,17 +975,17 @@ transform: translateX(25%);
     font-size: 12px;
     padding-top: 20px;
     margin-top: 100px;
-    position: static;
+    overflow: hidden;
     bottom: 0;
-    
+    position: relative;
 
-  
  }
 
  .internofooter{
      position: relative;
      height: 330px;
-     overflow: hidden;
+     overflow-x: scroll;
+ 
  }
  
  .footer1{
@@ -552,7 +1024,7 @@ transform: translateX(25%);
     width: 300px;
     position:absolute;
     bottom: 150px;
-    left: 1080px;
+    left:1050px;
 
  }
 
@@ -561,7 +1033,7 @@ transform: translateX(25%);
     
      height: 50px;
      color: #fff;
-     padding-top: 30px;
+     padding-top: 60px;
      position: relative;
      top: 200px;
      left: 320px;
@@ -590,5 +1062,7 @@ transform: translateX(25%);
     color: #ff7d04;
     font-size: 16px;
 
+
 }
 
+/*pie */
